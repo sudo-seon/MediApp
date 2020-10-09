@@ -1,0 +1,156 @@
+:root {
+  --primario: #0b254b;
+  --secundario: #00BFA6;
+  --claro: #ffffff;
+  --azul-claro: #F5F6FA;
+  --gris: #eff2f7;
+}
+
+body {
+  overflow: hidden;
+  font-family: 'Muli', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primario);
+  font-weight: 700;
+}
+
+.text-muted {
+  color: var(--primario) !important;
+  opacity: .7;
+}
+
+.bg-light {
+  background-color: var(--claro) !important;
+}
+
+.bg-light-blue {
+  background-color: var(--azul-claro) !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 0 1.25rem rgba(11,37,75,.05);
+}
+
+.shadow-hover {
+  transition: 1s ease-in-out;
+}
+
+.shadow-hover:hover {
+  transition: 1s ease-in-out;
+  box-shadow: 0 .5rem 1rem rgba(11,37,75,.10)!important;
+}
+
+#sidebar-container {
+  min-height: 100vh;
+  margin-left: -18rem;
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.1);
+  box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.1);
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-container .logo{
+  padding: 0.875rem 1.25rem;
+}
+
+#sidebar-container .menu {
+  width: 18rem;
+}
+
+#content-wrapper.toggled #sidebar-container {
+  margin-left: 0;
+}
+
+#sidebar-container a{
+  transition: background-color 0.5s ;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+}
+
+.badge {
+  padding: .5rem 1rem;
+}
+
+.bg-primary, .badge-primary {
+  background-color: rgba(0, 123, 255, .1) !important;
+}
+
+.avatar {
+  max-width: 35px;
+}
+
+.btn-primary {
+  background-color: rgba(0, 123, 255, .1) !important;
+  border: 0;
+}
+
+.btn-primary:hover {
+  background-color: rgba(0, 123, 255, .2) !important;
+}
+
+.badge-secondary {
+  background-color: var(--gris);
+  color: var(--primario);
+}
+
+#content {
+  overflow-y: auto;
+  height: 100vh;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0 .5rem;
+}
+
+table thead th {
+  border: 0 !important;
+}
+
+table tbody tr {
+  background-color: var(--claro);
+}
+
+table tbody td {
+  border-top: 0 !important;
+  line-height: 1.2;
+}
+
+.big-text{
+  font-size: 52px;
+  margin: 20px 0;
+  color: var(--secundario);
+}
+
+@media (max-width: 768px) {
+  #index-image{
+    display: none;
+  }
+
+  .big-text{
+    font-size: 20px;
+    margin: 20px 0;
+    color: var(--secundario);
+  }
+}
+
+@media (min-width: 768px) {
+  #sidebar-container {
+    margin-left: 0;
+  }
+
+  #content-wrapper.toggled #sidebar-container {
+    margin-left: -18rem;
+  }
+
+  #ctn-index-image{
+    display: none;
+  }
+}
